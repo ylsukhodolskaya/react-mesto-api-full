@@ -54,33 +54,6 @@ function App() {
 
   const history = useHistory();
 
-  //переменная состояния currentUser и эффект при монтировании, который будет вызывать api.getUserInfo и обновлять стейт-переменную из полученного значения
-  // useEffect(() => {
-  //   if (loggedIn) {
-  //     api.getUserInfo()
-  //       .then((data) => {
-  //         setCurrentUser({ ...currentUser, ...data })
-  //       })
-  //       .catch((err) => {
-  //         console.log('//////Ошибка api.getUserInfo//////', err);
-  //         openInfoTooltipPopup(false);
-  //       });
-  //   }
-  // }, [loggedIn]);
-
-  // useEffect(() => {
-  //   if (loggedIn) {
-  //     api.getInitialCards()
-  //       .then((initialCards) => {
-  //         setCards(initialCards);
-  //       })
-  //       .catch((err) => {
-  //         console.log('//////Ошибка api.getInitialCards//////', err);
-  //         openInfoTooltipPopup(false);
-  //       });
-  //   }
-  // }, [loggedIn]);
-
   useEffect(() => {
     checkToken();
   }, [loggedIn]);
