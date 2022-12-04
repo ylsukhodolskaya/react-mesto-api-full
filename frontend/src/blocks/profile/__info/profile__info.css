@@ -1,0 +1,21 @@
+.profile__info {
+  max-width: 500px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 873px) {
+  .profile__info {
+    position: static;
+    padding-top: 22px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .profile__info {
+    position: static;
+    max-width: 300px;
+    padding-top: 22px;
+    box-sizing: border-box;
+  }
+}

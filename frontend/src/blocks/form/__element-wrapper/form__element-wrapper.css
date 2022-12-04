@@ -1,0 +1,15 @@
+.form__element-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__element-wrapper:last-child {
+  gap: 15px;
+}
+
+@media screen and (max-width: 577px) {
+  .form__element-wrapper:last-child {
+    gap: 20px;
+  }
+}

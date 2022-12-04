@@ -1,0 +1,14 @@
+.profile__name-edit-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 16px 0;
+}
+
+@media screen and (max-width: 873px) {
+  .profile__name-edit-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}

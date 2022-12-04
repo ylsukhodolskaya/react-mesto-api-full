@@ -1,0 +1,21 @@
+.profile__edit-button {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 18px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url(../../../images/Edit_Button.svg);
+  background-size: 24px 24px;
+  border: none;
+  background-color: #000;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 577px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
+}

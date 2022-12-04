@@ -1,0 +1,8 @@
+.element__name {
+  background-color: #fff;
+  display: flex;
+  padding: 25px 15px 28px 21px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
