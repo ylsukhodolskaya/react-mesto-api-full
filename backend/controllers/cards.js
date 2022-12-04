@@ -93,7 +93,7 @@ export const dislikeCard = (req, res, next) => {
     req.params.cardId,
     { $pull: { likes: req.user._id } }, // удалить _id из массива
     { new: true },
-  )
+  ).populate(['owner', 'likes'])
     .then((card) => {
       if (card) {
         res.send(card);

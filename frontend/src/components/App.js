@@ -37,11 +37,10 @@ function App() {
     if (token) {
       Promise.all([api.getUserInfo(), api.getInitialCards()])
         .then(([user, cards]) => {
-          console.log(user, '-----------', cards);
           if (user && user.data) {
             setLoggedIn(true);
             setCurrentUser(user.data);
-            setCards(cards.data);
+            setCards(cards.data.reverse());
             history.push('/');
           }
         })

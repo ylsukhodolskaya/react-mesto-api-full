@@ -4,9 +4,8 @@ import {
   schemaObjectId,
   schemaURL,
 } from './common.js';
-import { urlRegex } from '../models/card.js';
 
-export const schemaAvatar = schemaURL.regex(urlRegex);
+export const schemaAvatar = schemaURL;
 export const schemaEmail = Joi.string().email().required();
 const schemaPassword = Joi.string().required();
 // необязательные поля без required

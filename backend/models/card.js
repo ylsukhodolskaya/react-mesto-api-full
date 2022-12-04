@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
+import validator from 'validator';
 
-export const urlRegex = /^https?:\/\/(www\.)?[a-zA-Z\d-]+\.[\w\d\-.~:/?#[\]@!$&'()*+,;=]{2,}#?$/;
+// export const urlRegex = /^https?:\/\/(www\.)?[a-zA-Z\d-]+\.[\w\d\-.~:/?#[\]@!$&'()*+,;=]{2,}#?$/;
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -13,7 +14,7 @@ const cardSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: (value) => urlRegex.test(value),
+      validator: (value) => validator.isURL(value),
       message: () => 'Ссылка должна быть http(s)-URL',
     },
   },
