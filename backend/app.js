@@ -8,6 +8,7 @@ import { constants } from 'http2';
 import path from 'path';
 import { errors } from 'celebrate';
 import { router } from './routes/index.js';
+import { requestLogger, errorLogger } from './middlewares/logger.js';
 
 const config = dotenv.config({
   path: path
@@ -22,6 +23,8 @@ const { PORT = 3000 } = process.env;
 
 mongoose.set({ runValidators: true });
 mongoose.connect('mongodb://localhost:27017/mestodb'); // подключаемся к базе данных
+app.use(requestLogger); // подключаем логгер запросов
+
 app.use(cors({
   origin: '*',
   allowedHeaders: ['content-type', 'authorization'],
@@ -30,6 +33,8 @@ app.use(bodyParser.json()); // для собирания JSON-формата
 app.use(bodyParser.urlencoded({ extended: true })); // для приёма веб-страниц внутри POST-запроса
 
 app.use(router);
+
+app.use(errorLogger); // подключаем логгер ошибок
 
 app.use(errors());
 
