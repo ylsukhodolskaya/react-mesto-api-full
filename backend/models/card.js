@@ -1,8 +1,6 @@
 import mongoose from 'mongoose';
 import validator from 'validator';
 
-// export const urlRegex = /^https?:\/\/(www\.)?[a-zA-Z\d-]+\.[\w\d\-.~:/?#[\]@!$&'()*+,;=]{2,}#?$/;
-
 const cardSchema = new mongoose.Schema({
   name: {
     type: String,
