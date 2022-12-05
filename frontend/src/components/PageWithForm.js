@@ -41,6 +41,7 @@ function PageWithForm(props) {
               placeholder="Email"
               required=""
               onChange={handleChangeEmail}
+              autoComplete="true"
             />
             <span className="input-email-error" />
           </label>
@@ -54,6 +55,7 @@ function PageWithForm(props) {
               minLength={8}
               maxLength={200}
               onChange={handleChangePassword}
+              autoComplete="true"
             />
             <span className="input-password-error" />
           </label>

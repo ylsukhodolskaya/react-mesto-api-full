@@ -159,7 +159,7 @@ function App() {
   function handleRegistration(registrationData) {
     api.register(registrationData)
       .then((result) => {
-        if (result && result.data) {
+        if (result) {
           openInfoTooltipPopup(true);
           history.push('/sign-in');
         } else {
