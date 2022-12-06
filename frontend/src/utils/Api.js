@@ -128,7 +128,7 @@ class Api {
 
 
 export const api = new Api({
-  url: "http://localhost:3000",
+  url: "https://mesto-backend.juliafox.nomoredomains.club",
   headers: {
     "content-type": "application/json",
     "authorization": "",
