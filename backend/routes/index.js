@@ -7,6 +7,12 @@ import { NotFoundError } from '../errors/NotFoundError.js';
 
 export const router = Router();
 
+router.use('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 // Роутинг авторизации
 router.use('/', authRouter);
 
