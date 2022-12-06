@@ -112,4 +112,5 @@ dist
 .vscode
 
 # Production
+build
 dist
